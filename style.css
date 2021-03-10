@@ -10,55 +10,77 @@
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
-
 }
 /* navbar style*/
 .navbar{
     position: fixed;
     width: 100%;
-    padding: 15px 0;
-    background:crimson;
+    padding: 30px 0;
+    background: crimson;
     font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3 ease;
+}
+.navbar .sticking{
+    padding: 30px 0;
+    background: crimson;
 }
 .navbar .max-width{
     display: flex;
     align-items: center;
-    justify-content:space-between ;
-
+    justify-content: space-between;
 }
 .navbar .logo a{
     color: #fff;
     font-size: 35px;
     font-weight: 600;
-
+}
+.navbar .logo a span{
+    color:rgb(54, 36, 36);
+    transition: all 0.3 ease;
+}
+.navbar .sticking .logo a span{
+    color: #fff;
 }
 .navbar .menu li{
     list-style: none;
     display: inline-block;
 }
 .navbar .menu li a{
-    color:#fff;
+    color: #fff;
     font-size: 18px;
     font-weight: 500;
-    margin-left: 25px
+    margin-left: 25px;
+    transition: color 0.3s ease;
 }
-
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar .logo .sticking a:hover{
+    color: #fff;
+}
+/* Style for menu-butten*/
+.menu-butten {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
 /* style for home section*/
 .home{
     display: flex;
-    background: url("klone.jpg") no-repeat center;
+    background: url("Klorange.jpg") no-repeat center;
     height: 100vh;
-    color:rgb(56, 30, 30);
+    color:rgb(56, 30, 30);/*fff*/
     min-height: 500px;
-    font-family: 'Ubuntu',sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 .home .max-width{
     margin: auto 0 auto 40px;
 }
 .home .home-content .text-1{
     font-size: 27px;
-    outline-color: bisque;
-    outline-width: 16px;
+    /*outline-color: bisque;
+    outline-width: 16px;*/
 }
 .home .home-content .text-2{
     font-size: 75px;
@@ -73,4 +95,65 @@
     color: crimson;
     font-weight: 500;
 }
-    
+
+/* Media query*/
+@media (max-width: 1102px){
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+@media (max-width: 989px){
+    .max-width{
+        padding: 0 50px;
+    }
+
+}
+
+@media (max-width: 945px){
+    .max-width{
+        padding: 0 50px;
+    }
+    .menu-butten{
+        display: block;
+        z-index: 999;
+    }
+    .menu-butten i.active:before{
+        content:"\f00d"; 
+    }
+    .navbar .menu{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: rgb(23, 41, 59);
+    text-align: center;
+    padding-top: 85px;
+    transition: all 0.3 ease;
+}
+    .navbar .menu .active{
+    left: 0;
+}
+    .navbar .menu li{
+    display: block;
+}
+    .navbar .menu li a{
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+}
+    .home .home-content .text-2{
+    font-size: 70px;
+}
+    .home .home-content .text-3{
+    font-size: 35px;
+}   
+ 
+@media (max-width: 500px){
+    .home .home-content .text-2{
+        font-size: 48px;
+    }
+    .home .home-content .text-3{
+        font-size: 25px;
+    }   
+} 
