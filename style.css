@@ -95,6 +95,33 @@
     color: crimson;
     font-weight: 500;
 }
+.card{
+    background-color: crimson;
+    height: 200px;
+}
+.card p{
+    margin-left: 20%;
+    margin-right: 20%;
+    color:white;
+}
+.spacer{
+    height:40px;
+}
+.headingcolor{
+    color:white;
+}
+.footer {
+    background-color:rgb(54, 36, 36);
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    color: white;
+    text-align: center;
+ }
+ .cardimage{
+    width: 100px;
+ }
 
 /* Media query*/
 @media (max-width: 1102px){
@@ -157,3 +184,4 @@
         font-size: 25px;
     }   
 } 
+}
