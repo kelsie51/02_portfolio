@@ -6,6 +6,6 @@
 
 </p> Link to  page : https://kelsie51.github.io/02_portfolio/ <p>
   
-![Screenshot](/portfolio.png)
+![Screenshot](https://github.com/kelsie51/02_portfolio/blob/main/portfolio.PNG)
   
 
